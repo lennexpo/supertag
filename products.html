@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Products | SuperTag</title>
+<meta name="description" content="Livestock tags, tagging pliers, poultry equipment, piggery accessories, day old chicks and medication from SuperTag.">
+<link rel="icon" href="images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F3EFE4;
+  --ink:#1D2A22;
+  --field:#1F4A33;
+  --field-deep:#173826;
+  --tag-green:#2E9B4E;
+  --tag-yellow:#F2C230;
+  --tag-red:#D8392F;
+  --tag-blue:#2F6FB5;
+  --muted:#56635A;
+  --line:#CFC9B6;
+  --display:"Bricolage Grotesque","Trebuchet MS",sans-serif;
+  --body:"Instrument Sans","Segoe UI",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.6}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--tag-blue);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+
+header{position:sticky;top:0;z-index:20;background:var(--paper);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:92px}
+.brand img{height:58px;display:block}
+nav{display:flex;gap:28px;align-items:center}
+nav a{text-decoration:none;font-weight:500;font-size:16px}
+nav a:hover{text-decoration:underline;text-underline-offset:4px}
+.btn{display:inline-block;background:var(--field);color:#fff;text-decoration:none;font-weight:600;padding:14px 24px;border-radius:6px;font-size:17px;transition:background .15s}
+.btn:hover{background:var(--field-deep)}
+.btn.alt{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+.btn.alt:hover{background:var(--ink);color:var(--paper)}
+header .btn{padding:10px 18px;font-size:15px}
+
+.hero{position:relative;overflow:hidden;padding:72px 0 88px}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(40px,6.4vw,76px);line-height:1.02;letter-spacing:-.03em;max-width:12ch}
+.lead{margin-top:24px;max-width:46ch;color:var(--muted);font-size:20px}
+.cta{margin-top:36px;display:flex;gap:14px;flex-wrap:wrap}
+
+.tags{display:flex;justify-content:center;gap:clamp(10px,2.4vw,26px);align-items:flex-start;height:420px;position:relative}
+.tags::before{content:"";position:absolute;top:0;left:4%;right:4%;height:6px;background:var(--ink);border-radius:3px}
+.tag{width:clamp(56px,11vw,96px);transform-origin:50% 0;margin-top:6px;animation:sway 4.8s ease-in-out infinite}
+.tag .cord{width:4px;height:44px;background:var(--ink);margin:0 auto}
+.tag .body{position:relative;height:clamp(150px,26vw,230px);border-radius:14px 14px 40px 40px;display:flex;align-items:flex-end;justify-content:center;padding-bottom:18px;color:#fff;font-family:var(--display);font-weight:800;font-size:clamp(14px,2vw,20px);box-shadow:0 10px 0 rgba(29,42,34,.12)}
+.tag .body::before{content:"";position:absolute;top:14px;left:50%;width:22px;height:22px;margin-left:-11px;border-radius:50%;background:var(--paper)}
+.tag.g{--c:var(--tag-green)} .tag.y{--c:var(--tag-yellow)} .tag.r{--c:var(--tag-red)} .tag.b{--c:var(--tag-blue)}
+.tag .body{background:var(--c)}
+.tag.y .body{color:var(--ink)}
+.tag:nth-child(2){animation-delay:-1.2s;margin-top:34px}
+.tag:nth-child(3){animation-delay:-2.4s;margin-top:12px}
+.tag:nth-child(4){animation-delay:-3.4s;margin-top:48px}
+@keyframes sway{0%,100%{transform:rotate(-2.2deg)}50%{transform:rotate(2.2deg)}}
+
+section{padding:84px 0;border-top:1px solid var(--line)}
+h2{font-family:var(--display);font-weight:800;font-size:clamp(30px,4.2vw,48px);line-height:1.08;letter-spacing:-.025em;max-width:18ch}
+.split{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px}
+.split p.sub{margin-top:18px;color:var(--muted);max-width:34ch}
+
+.supply{list-style:none;border-top:2px solid var(--ink)}
+.supply li{display:grid;grid-template-columns:84px 1fr;gap:20px;align-items:center;padding:22px 0;border-bottom:1px solid var(--line)}
+.supply .thumb{width:84px;height:84px;border-radius:50%;overflow:hidden;background:#fff;border:1px solid var(--line)}
+.supply .thumb img{width:100%;height:100%;object-fit:cover}
+.supply .thumb.placeholder{display:flex;align-items:center;justify-content:center;font-size:30px}
+.supply h3{font-family:var(--display);font-size:26px;font-weight:700;letter-spacing:-.015em}
+.supply p{color:var(--muted);margin-top:4px;max-width:52ch}
+
+.coding{background:var(--field);color:#F3EFE4}
+.coding h2{max-width:20ch}
+.coding .sub{color:#C9D6CC;margin-top:18px;max-width:46ch}
+.swatches{margin-top:44px;display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-radius:10px;overflow:hidden}
+.sw{padding:64px 20px 20px;font-family:var(--display);font-weight:700;font-size:20px}
+.sw span{display:block;font-family:var(--body);font-weight:400;font-size:15px;margin-top:4px;opacity:.9}
+.sw.g{background:var(--tag-green);color:#fff}.sw.y{background:var(--tag-yellow);color:var(--ink)}.sw.r{background:var(--tag-red);color:#fff}.sw.b{background:var(--tag-blue);color:#fff}
+
+.branches{display:grid;grid-template-columns:1fr 1fr;gap:0;border:2px solid var(--ink);border-radius:10px;margin-top:44px}
+.branch{padding:34px}
+.branch+.branch{border-left:2px solid var(--ink)}
+.branch h3{font-family:var(--display);font-size:30px;font-weight:800;letter-spacing:-.02em}
+.branch address{font-style:normal;margin-top:14px;color:var(--muted)}
+.branch .tel{display:block;margin-top:18px;font-family:var(--display);font-weight:700;font-size:24px;text-decoration:none}
+.branch .tel:hover{text-decoration:underline}
+
+.contact{text-align:left}
+.contact h2{max-width:16ch}
+.contact .cta{margin-top:28px}
+footer{background:var(--ink);color:#D9D6C8;padding:36px 0;font-size:15px}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+footer .brand img{height:38px;background:#fff;padding:8px 12px;border-radius:6px}
+footer a{text-decoration:none}
+
+@media (max-width:820px){
+  body{font-size:17px}
+  .hero{padding:44px 0 56px}
+  .hero .wrap,.split{grid-template-columns:1fr;gap:36px}
+  .tags{height:330px}
+  .swatches{grid-template-columns:1fr 1fr}
+  .branches{grid-template-columns:1fr}
+  .branch+.branch{border-left:0;border-top:2px solid var(--ink)}
+  section{padding:60px 0}
+}
+@media (prefers-reduced-motion:reduce){.tag{animation:none}html{scroll-behavior:auto}}
+
+.menu{display:none;background:none;border:2px solid var(--ink);border-radius:6px;padding:8px 12px;font:600 15px var(--body);color:var(--ink);cursor:pointer}
+nav a.on{text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:2px}
+.eyebrow{font-weight:600;font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--tag-green);margin-bottom:14px}
+.coding .eyebrow{color:var(--tag-yellow)}
+.strip{background:var(--ink);color:var(--paper);padding:0;border:0}
+.strip .wrap{display:grid;grid-template-columns:repeat(3,1fr)}
+.strip div.f{padding:26px 24px;border-left:1px solid #3a4a40;font-family:var(--display);font-weight:700;font-size:20px;line-height:1.25}
+.strip div.f:first-child{border-left:0;padding-left:0}
+.strip small{display:block;font-family:var(--body);font-weight:400;font-size:15px;color:#B9C4BB;margin-top:4px}
+.page-hero{padding:72px 0 56px;border-top:0}
+.page-hero h1{max-width:16ch;font-size:clamp(38px,5.4vw,64px)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:26px;display:flex;flex-direction:column;gap:10px;text-decoration:none;transition:transform .15s,box-shadow .15s}
+.card:hover{transform:translateY(-3px);box-shadow:0 12px 0 rgba(29,42,34,.08)}
+.card h3{font-family:var(--display);font-size:22px;font-weight:700;letter-spacing:-.01em}
+.card p{color:var(--muted);font-size:16px}
+.card .thumb,.ico{width:72px;height:72px;border-radius:50%;overflow:hidden;background:var(--paper);border:1px solid var(--line);display:flex;align-items:center;justify-content:center}
+.card .thumb img{width:100%;height:100%;object-fit:cover}
+.ico svg{width:34px;height:34px;stroke:var(--field);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.supply .ico{width:84px;height:84px}
+.more{margin-top:34px}
+.photo{border-radius:12px;border:1px solid var(--line);background:#fff;padding:18px;display:flex;align-items:center;justify-content:center}
+.photo img{max-width:100%;max-height:300px;display:block}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.uses{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+.use{border-top:4px solid var(--c);padding-top:16px}
+.use h3{font-family:var(--display);font-size:22px;font-weight:700}
+.use p{color:var(--muted);margin-top:6px;font-size:16px}
+.steps{counter-reset:s;list-style:none;margin-top:36px;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.steps li{counter-increment:s;border:2px solid var(--ink);border-radius:10px;padding:24px}
+.steps li::before{content:counter(s);display:flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:var(--field);color:#fff;font:800 18px var(--display);margin-bottom:12px}
+.steps h3{font-family:var(--display);font-size:20px}
+.steps p{color:var(--muted);font-size:16px;margin-top:4px}
+.band{background:var(--field);color:var(--paper)}
+.band h2{max-width:20ch}.band .lead{color:#C9D6CC}
+.band .btn{background:var(--tag-yellow);color:var(--ink)}
+.band .btn:hover{background:#fff}
+.band .btn.alt{background:transparent;color:var(--paper);border-color:var(--paper)}
+.band .btn.alt:hover{background:var(--paper);color:var(--ink)}
+.branch .wa{display:inline-block;margin-top:20px}
+footer .links{display:flex;gap:18px;flex-wrap:wrap}
+@media (max-width:820px){
+  .menu{display:block}
+  nav{display:none;position:absolute;left:0;right:0;top:92px;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0;padding:8px 24px 20px}
+  nav.open{display:flex}
+  nav a{padding:14px 0;font-size:18px;border-bottom:1px solid var(--line)}
+  nav a.btn{margin-top:14px;text-align:center;border:0}
+  .bar{position:relative}
+  .strip .wrap,.cards,.uses,.steps,.duo{grid-template-columns:1fr}
+  .strip div.f{border-left:0;border-top:1px solid #3a4a40;padding:18px 0}
+  .strip div.f:first-child{border-top:0}
+  .duo{gap:28px}
+}
+
+
+.topbar{background:var(--field-deep);color:#DCE6DF;font-size:14px}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:40px;flex-wrap:wrap}
+.topbar a{text-decoration:none;font-weight:600;color:#fff}.topbar a:hover{text-decoration:underline}
+.topbar .ph{display:flex;gap:22px;flex-wrap:wrap}
+header{box-shadow:0 2px 14px rgba(29,42,34,.07)}
+.btn{border-radius:999px;box-shadow:0 4px 12px rgba(31,74,51,.22)}
+.btn.alt{box-shadow:none}.band .btn{box-shadow:none}
+.card{border-radius:16px;box-shadow:0 2px 10px rgba(29,42,34,.05)}
+.hero{background:linear-gradient(180deg,#F8F5EC 0%,var(--paper) 100%)}
+.hero h1.wide{max-width:15ch;font-size:clamp(38px,5.4vw,66px)}
+.note{margin-top:18px;font-size:15px;color:var(--muted)}
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:40px}
+.why div{border-top:4px solid var(--c);padding-top:16px}
+.why h3{font-family:var(--display);font-size:21px;font-weight:700;line-height:1.2}
+.why p{color:var(--muted);font-size:16px;margin-top:6px}
+.fab{position:fixed;right:20px;bottom:20px;z-index:30;display:flex;align-items:center;gap:10px;background:#1FA855;color:#fff;text-decoration:none;font-weight:600;font-size:16px;padding:13px 20px;border-radius:999px;box-shadow:0 8px 22px rgba(0,0,0,.25)}
+.fab:hover{background:#188944}
+.fab svg{width:22px;height:22px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+footer{padding:56px 0 28px}
+footer .fgrid{display:grid;grid-template-columns:1.3fr 1fr 1.2fr 1.2fr;gap:36px;align-items:start}
+footer h4{font-family:var(--display);color:#fff;font-size:17px;margin-bottom:12px}
+footer ul{list-style:none;display:grid;gap:8px}
+footer a:hover{text-decoration:underline}
+footer .tagline{margin-top:14px;max-width:30ch;color:#B9C4BB}
+footer .by{margin-left:auto;text-align:right}
+footer .legal{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-top:40px;padding-top:20px;border-top:1px solid #3a4a40;font-size:14px;color:#B9C4BB}
+@media (max-width:820px){.why{grid-template-columns:1fr 1fr}footer .fgrid{grid-template-columns:1fr 1fr}.topbar .hide{display:none}.fab span{display:none}.fab{padding:14px}}
+@media (max-width:520px){.why,footer .fgrid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="wrap"><span class="hide">Livestock tags, poultry equipment and farm supplies</span><span class="ph"><a href="tel:+263715501340">Harare: 0715 501 340</a><a href="tel:+263714830174">Bulawayo: 0714 830 174</a></span></div></div>
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="index.html"><img src="images/logo.png" alt="SuperTag"></a>
+    <button class="menu" aria-expanded="false" aria-controls="nav" onclick="var n=document.getElementById('nav');var o=n.classList.toggle('open');this.setAttribute('aria-expanded',o)">Menu</button>
+    <nav id="nav" aria-label="Main"><a href="index.html">Home</a><a href="products.html" class="on" aria-current="page">Products</a><a href="ear-tags.html">Ear tags</a><a href="contact.html">Branches</a><a class="btn" href="https://wa.me/263715501340?text=Hello%20SuperTag%2C%20I%20would%20like%20a%20quote%20for%3A%20">Get a quote</a></nav>
+  </div>
+</header>
+<main>
+<section class="page-hero"><div class="wrap split"><div><p class="eyebrow">Products</p><h1>What we supply</h1>
+<p class="sub">Ask for what you need. We will tell you what we have in stock.</p></div>
+<ul class="supply"><li><div class="thumb"><img src="images/ear-tags.png" alt="Branded coloured ear tags"></div><div><h3>Branded livestock tags</h3><p>Ear tags in multiple colours, applied with our tagging pliers, so every animal is identified.</p><p><a href="https://wa.me/263715501340?text=Hi%20SuperTag,%20I%20would%20like%20to%20ask%20about:%20Branded%20livestock%20tags"><strong>Ask about this on WhatsApp</strong></a></p></div></li><li><div class="thumb"><img src="images/pliers.png" alt="Ear tagging pliers"></div><div><h3>Tagging pliers &amp; applicators</h3><p>The tool that gets tags on properly, first time.</p><p><a href="https://wa.me/263715501340?text=Hi%20SuperTag,%20I%20would%20like%20to%20ask%20about:%20Tagging%20pliers%20and%20applicators"><strong>Ask about this on WhatsApp</strong></a></p></div></li><li><div class="thumb"><img src="images/poultry.png" alt="Poultry feeders and drinkers"></div><div><h3>Poultry equipment</h3><p>Feeders, drinkers and the gear that keeps a poultry run working.</p><p><a href="https://wa.me/263715501340?text=Hi%20SuperTag,%20I%20would%20like%20to%20ask%20about:%20Poultry%20equipment"><strong>Ask about this on WhatsApp</strong></a></p></div></li><li><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 11c0-3 3-5 8-5s8 2 8 5-3 6-8 6-8-3-8-6z"/><path d="M6 7 5 4l3 1M18 7l1-3-3 1"/><circle cx="10" cy="11" r=".6"/><circle cx="14" cy="11" r=".6"/><path d="M9 17v3M15 17v3"/></svg></div><div><h3>Piggery accessories</h3><p>Practical supplies for pig farmers.</p><p><a href="https://wa.me/263715501340?text=Hi%20SuperTag,%20I%20would%20like%20to%20ask%20about:%20Piggery%20accessories"><strong>Ask about this on WhatsApp</strong></a></p></div></li><li><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="6"/><path d="M12 7V5M10 5.5 12 4l2 1.5M18 13h3l-2 2M9 12.5v.1M15 12.5v.1"/></svg></div><div><h3>Day old chicks</h3><p>Start your next batch with chicks from SuperTag.</p><p><a href="https://wa.me/263715501340?text=Hi%20SuperTag,%20I%20would%20like%20to%20ask%20about:%20Day%20old%20chicks"><strong>Ask about this on WhatsApp</strong></a></p></div></li><li><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="3" rx="1"/><rect x="6" y="6" width="12" height="15" rx="2"/><path d="M12 10v6M9 13h6"/></svg></div><div><h3>Poultry and livestock medication</h3><p>Medicines for your birds and your herd.</p><p><a href="https://wa.me/263715501340?text=Hi%20SuperTag,%20I%20would%20like%20to%20ask%20about:%20Poultry%20and%20livestock%20medication"><strong>Ask about this on WhatsApp</strong></a></p></div></li></ul></div></section>
+<section class="band"><div class="wrap"><h2>Not sure what you need?</h2><p class="lead">Tell us about your animals and we will point you to the right supplies.</p>
+<div class="cta"><a class="btn" href="https://wa.me/263715501340">Message us on WhatsApp</a><a class="btn alt" href="tel:+263715501340">Call 0715 501 340</a></div></div></section>
+</main>
+<footer><div class="wrap"><div class="fgrid">
+<div><a class="brand" href="index.html"><img src="images/logo.png" alt="SuperTag"></a><p class="tagline">Your one stop supplier for livestock tags, poultry equipment and farm supplies.</p></div>
+<div><h4>Explore</h4><ul><li><a href="index.html">Home</a></li><li><a href="products.html">Products</a></li><li><a href="ear-tags.html">Ear tags</a></li><li><a href="contact.html">Branches</a></li></ul></div>
+<div><h4>Harare</h4><ul><li>110 Nelson Mandela Avenue, Harare CBD, First floor, Suite 6</li><li><a href="tel:+263715501340">0715 501 340</a></li></ul></div>
+<div><h4>Bulawayo</h4><ul><li>No. 31A J.M.N Nkomo Street, between 1st and 2nd Avenue</li><li><a href="tel:+263714830174">0714 830 174</a></li><li><a href="https://wa.me/263715501340">Chat on WhatsApp</a></li></ul></div>
+</div><p class="legal"><span>&copy; 2026 SuperTag. Harare and Bulawayo, Zimbabwe.</span><span class="by">Website by <a href="https://www.invitt.co.zw/">Invitt Co</a></span></p></div></footer>
+<a class="fab" href="https://wa.me/263715501340?text=Hello%20SuperTag%2C%20I%20would%20like%20a%20quote%20for%3A%20" aria-label="Chat with SuperTag on WhatsApp"><svg viewBox="0 0 24 24"><path d="M21 12a8.5 8.5 0 0 1-12.4 7.5L3 21l1.6-5.4A8.5 8.5 0 1 1 21 12z"/></svg><span>Chat on WhatsApp</span></a>
+</body>
+</html>
