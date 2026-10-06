@@ -1,27 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://supertag.co.zw/</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <image:image><image:loc>https://supertag.co.zw/images/products/laser-printed-ear-tags.jpg</image:loc></image:image>
+    <image:image><image:loc>https://supertag.co.zw/images/products/ear-tag-applicators.jpg</image:loc></image:image>
+    <image:image><image:loc>https://supertag.co.zw/images/products/poultry-drinkers.jpg</image:loc></image:image>
+    <image:image><image:loc>https://supertag.co.zw/images/products/digital-weighing-scale.jpg</image:loc></image:image>
+    <image:image><image:loc>https://supertag.co.zw/images/products/hanging-scale.jpg</image:loc></image:image>
+    <image:image><image:loc>https://supertag.co.zw/images/products/pig-feeders.jpg</image:loc></image:image>
+    <image:image><image:loc>https://supertag.co.zw/images/products/layer-cages.jpg</image:loc></image:image>
+    <image:image><image:loc>https://supertag.co.zw/images/products/gas-brooder-heater.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://supertag.co.zw/products.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image><image:loc>https://supertag.co.zw/images/products/laser-printed-ear-tags.jpg</image:loc></image:image>
+    <image:image><image:loc>https://supertag.co.zw/images/products/button-ear-tags.jpg</image:loc></image:image>
+    <image:image><image:loc>https://supertag.co.zw/images/products/numbered-ear-tags.jpg</image:loc></image:image>
+    <image:image><image:loc>https://supertag.co.zw/images/products/ear-tag-applicators.jpg</image:loc></image:image>
+    <image:image><image:loc>https://supertag.co.zw/images/products/ear-tag-marker-pens.jpg</image:loc></image:image>
+    <image:image><image:loc>https://supertag.co.zw/images/products/drenching-gun.jpg</image:loc></image:image>
+    <image:image><image:loc>https://supertag.co.zw/images/products/elastrator-and-rings.jpg</image:loc></image:image>
+    <image:image><image:loc>https://supertag.co.zw/images/products/castrators.jpg</image:loc></image:image>
+    <image:image><image:loc>https://supertag.co.zw/images/products/nose-ring-pliers.jpg</image:loc></image:image>
+    <image:image><image:loc>https://supertag.co.zw/images/products/trimming-shears.jpg</image:loc></image:image>
+    <image:image><image:loc>https://supertag.co.zw/images/products/livestock-pliers.jpg</image:loc></image:image>
+    <image:image><image:loc>https://supertag.co.zw/images/products/livestock-weigh-tape.jpg</image:loc></image:image>
+    <image:image><image:loc>https://supertag.co.zw/images/products/electric-livestock-prod.jpg</image:loc></image:image>
+    <image:image><image:loc>https://supertag.co.zw/images/products/licking-bricks.jpg</image:loc></image:image>
+    <image:image><image:loc>https://supertag.co.zw/images/products/digital-weighing-scale.jpg</image:loc></image:image>
+    <image:image><image:loc>https://supertag.co.zw/images/products/hanging-scale.jpg</image:loc></image:image>
+    <image:image><image:loc>https://supertag.co.zw/images/products/weighing-cage.jpg</image:loc></image:image>
+    <image:image><image:loc>https://supertag.co.zw/images/products/poultry-drinkers.jpg</image:loc></image:image>
+    <image:image><image:loc>https://supertag.co.zw/images/products/nipple-drinkers.jpg</image:loc></image:image>
+    <image:image><image:loc>https://supertag.co.zw/images/products/poultry-crates.jpg</image:loc></image:image>
+    <image:image><image:loc>https://supertag.co.zw/images/products/egg-trays.jpg</image:loc></image:image>
+    <image:image><image:loc>https://supertag.co.zw/images/products/gas-brooder-heater.jpg</image:loc></image:image>
+    <image:image><image:loc>https://supertag.co.zw/images/products/layer-cages.jpg</image:loc></image:image>
+    <image:image><image:loc>https://supertag.co.zw/images/products/poultry-cages.jpg</image:loc></image:image>
+    <image:image><image:loc>https://supertag.co.zw/images/products/poultry-leg-rings.jpg</image:loc></image:image>
+    <image:image><image:loc>https://supertag.co.zw/images/products/pig-feeders.jpg</image:loc></image:image>
+    <image:image><image:loc>https://supertag.co.zw/images/products/pig-pregnancy-test-kits.jpg</image:loc></image:image>
+    <image:image><image:loc>https://supertag.co.zw/images/products/sack-sewing-machine.jpg</image:loc></image:image>
+    <image:image><image:loc>https://supertag.co.zw/images/products/seedling-trays.jpg</image:loc></image:image>
+    <image:image><image:loc>https://supertag.co.zw/images/products/wire-mesh-rolls.jpg</image:loc></image:image>
+    <image:image><image:loc>https://supertag.co.zw/images/products/plastic-netting-rolls.jpg</image:loc></image:image>
+    <image:image><image:loc>https://supertag.co.zw/images/products/hanging-fly-traps.jpg</image:loc></image:image>
+    <image:image><image:loc>https://supertag.co.zw/images/products/feeding-stand.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://supertag.co.zw/ear-tags.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image><image:loc>https://supertag.co.zw/images/products/laser-printed-ear-tags.jpg</image:loc></image:image>
+    <image:image><image:loc>https://supertag.co.zw/images/products/button-ear-tags.jpg</image:loc></image:image>
+    <image:image><image:loc>https://supertag.co.zw/images/products/numbered-ear-tags.jpg</image:loc></image:image>
+    <image:image><image:loc>https://supertag.co.zw/images/products/ear-tag-applicators.jpg</image:loc></image:image>
+    <image:image><image:loc>https://supertag.co.zw/images/products/ear-tag-marker-pens.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://supertag.co.zw/contact.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
+    <image:image><image:loc>https://supertag.co.zw/images/bulawayo-storefront.jpg</image:loc></image:image>
   </url>
 </urlset>
